@@ -1,0 +1,15 @@
+Stages:
+pretrained (processing raw data) --> instruction fine tune (good data set) --> reinforcement learning with human feedback (rlhf)
+
+pretrained (ex: llama3.1)  --> inference is done by simply running it.
+Inference can be enhanced with RAG.  
+
+AI factory:
+per cluster 72 @8 gpu nvidia = 576 gpu per cluster 
+
+Transport for High Performance Computing (HPC)
+- Infiniband (high speed, low latency) --> expensive, dedicated hardware (switches, cable, network adapter), scale well on big cluster
+- RoCE (RDMA over Converged Ethernet) (high speed, low latency, but based on ethernet) --> less cost, can use existing ethernet, scale well but need carefully consider priority flow control, congestion management
+
+Head node (DPU)
+
